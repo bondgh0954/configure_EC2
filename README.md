@@ -21,12 +21,26 @@ create an empty list
 
 Use the for loop to loop through the instances and grab the instanceId and append them in the empty list
 
+     my_instance_ids.append()
+
 
 
 
 Add tags to the instances
 
 Use the boto resource to create tags for the instances Id
+use the list of ids as the resource
+
+    response = ec2.create_tags(
+    Resources=my_instance_ids,
+   
+    Tags=[
+        {
+            'Key': 'Environment',
+            'Value': 'Production'
+        },
+    ]
+)
 
 
 
