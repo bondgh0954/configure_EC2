@@ -13,7 +13,7 @@
 Assuming we have 20 servers created in one region which are used as production servers and another 10 servers created in a different region which are used as development servers. Adding environment tags one after the other may be time consuming and therefore With the use of python script it is easier to add tags to these servers.
 
 # Steps
-Get all instances from a region and save them in a list
+Get all instances from a region and save them in a list  <br/>
 
 create an empty list
 
@@ -28,7 +28,7 @@ Use the for loop to loop through the instances and grab the instanceId and appen
 
 Add tags to the instances
 
-Use the boto resource to create tags for the instances Id
+Use the boto resource to create tags for the instances Id  <br/>
 use the list of ids as the resource
 
     response = ec2.create_tags(
